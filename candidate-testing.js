@@ -30,28 +30,23 @@ function askForName() {
 }
 function askQuestion() {
   // TODO 1.2b: Ask candidate the question and assign the response as candidateAnswer //
-let candidateAnswer = input.question(question);
 
  for (let i = 0; i < questions.length; i++) {
-	 let candidateAnswers = input.question(questions[i])
-   if (candidateAnswers.toUpperCase() === correctAnswers[i].toUpperCase()){
-		console.log(`Your Answer: ${candidateAnswers}`)
-    points++;
-    console.log(`Correct Answer: ${correctAnswers[i]}\n`)
-	} else {
-    console.log(`Your Answer: ${candidateAnswers}`)
-	  console.log(`Correct Answer: ${correctAnswers[i]}\n`);
-  }
+	 let candidateAnswer = input.question(questions[i])
+   candidateAnswers.push(candidateAnswer);
 }
 }
 
 function gradeQuiz(candidateAnswers) {
   // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly // 
-if (candidateAnswer === correctAnswer) {
-  console.log("Your answer is correct");
-} else {
-  console.log("wrong answer");
-}
+for (let i = 0; i < questions.length; i++) {
+  if (candidateAnswers[i].toUpperCase() === correctAnswers[i].toUpperCase()){
+		points++; 
+  } console.log (`${candidateAnswers}`)
+    console.log(`Your Answer: ${candidateAnswers}`)
+	  console.log(`Correct Answer: ${correctAnswers[i]}\n`);
+  }
+
 
 let numbOfQuiz = questions.length;
 let grade = (points / numbOfQuiz) * 100;
