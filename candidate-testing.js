@@ -10,7 +10,7 @@ let candidateAnswers = [];
 let question = "Who was the first American woman in space? ";
 let correctAnswer = "Sally Ride";
 let candidateAnswer = "";
-let points = 0;
+
 let questions = [
   '1) Who was the first American woman in space? ',
   '2) True or false: 5000 meters = 5 kilometers. ',
@@ -39,6 +39,7 @@ function askQuestion() {
 
 function gradeQuiz(candidateAnswers) {
   // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly // 
+let points = 0;
 for (let i = 0; i < questions.length; i++) {
   if (candidateAnswers[i].toUpperCase() === correctAnswers[i].toUpperCase()){
 		points++; 
