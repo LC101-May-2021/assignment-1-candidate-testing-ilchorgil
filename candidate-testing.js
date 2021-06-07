@@ -10,7 +10,7 @@ let candidateAnswers = [];
 let question = "";
 let candidateAnswer = "";
 let correctAnswer = "";
-let score = 1;
+// let score = 1;
 let points = 0;
 let questions = [
   '1) Who was the first American woman in space? ',
@@ -58,7 +58,7 @@ let numbOfQuiz = 5;
 
   let grade = (points/ numbOfQuiz) * 100;
   if (grade >= 80) {
-    console.log(`>>> Overall Grade : ${grade}% (${points} of 5 responses correct) <<<`);
+    console.log(`>>> Overall Grade: ${grade}% (${points} of 5 responses correct) <<<`);
     console.log(`>>> Status: PASSED <<<`);
   } else {
     console.log(`>>> Overall Grade: ${grade}% (${points} of 5 responses correct) <<<`);
