@@ -42,8 +42,10 @@ function gradeQuiz(candidateAnswers) {
 for (let i = 0; i < questions.length; i++) {
   if (candidateAnswers[i].toUpperCase() === correctAnswers[i].toUpperCase()){
 		points++; 
-  } console.log (`${candidateAnswers}`)
-    console.log(`Your Answer: ${candidateAnswers}`)
+  }
+  
+  console.log(`\n${questions[i]}`) 
+  console.log(`Your Answer: ${candidateAnswers[i]}`)
 	  console.log(`Correct Answer: ${correctAnswers[i]}\n`);
   }
 
