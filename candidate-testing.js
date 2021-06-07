@@ -16,7 +16,7 @@ let totals = "";
 
 let questions = [
   "1) Who was the first American woman in space? ",
-  "2) True or false: 5 kilometer == 5000 meters? ",
+  "2) True or false: 5 kilometer = 5000 meters.",
   "3) (5 + 3)/2 * 10 = ? ", 
   "4) Given the array [8, 'Orbit', 'Trajectory', 45], what entry is at index 2? ", 
   "5) What is the minimum crew size for the ISS? "];
