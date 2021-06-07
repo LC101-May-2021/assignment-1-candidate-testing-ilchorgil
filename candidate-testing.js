@@ -48,10 +48,10 @@ let numbOfQuiz = 5;
 	if (candidateAnswers.toUpperCase() === correctAnswers[i].toUpperCase()){
 		console.log(`Your Answer: ${candidateAnswers}`)
     points++;
-    console.log(`Correct Answer: ${correctAnswers[i]}\n`)
+    console.log(`Correct Answer: ${correctAnswers[i]}`)
 	} else {
     console.log(`Your Answer: ${candidateAnswers}`)
-	  console.log(`Correct Answer: ${correctAnswers[i]}\n`);
+	  console.log(`Correct Answer: ${correctAnswers[i]}`);
   }
   }
 // let points = correctAnswers;
