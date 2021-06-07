@@ -48,10 +48,10 @@ let numbOfQuiz = 5;
 	if (candidateAnswers.toUpperCase() === correctAnswers[i].toUpperCase()){
 		console.log(`Your Answer: ${candidateAnswers}`)
     points++;
-    console.log(`Correct Answer: ${correctAnswers[i]}`)
+    console.log(`Correct Answer: ${correctAnswers[i]}\n`)
 	} else {
     console.log(`Your Answer: ${candidateAnswers}`)
-	  console.log(`Correct Answer: ${correctAnswers[i]}`);
+	  console.log(`Correct Answer: ${correctAnswers[i]}\n`);
   }
   }
 // let points = correctAnswers;
@@ -61,7 +61,7 @@ let numbOfQuiz = 5;
     console.log(`>>> Overall Grade : ${grade}% (${points} of 5 responses correct) <<<`);
     console.log(`>>> Status: PASSED <<<`);
   } else {
-    console.log(`>>> Overall Grade : ${grade}% (${points} of 5 responses correct) <<<`);
+    console.log(`>>> Overall Grade: ${grade}% (${points} of 5 responses correct) <<<`);
     console.log(`>>> Status: FAILED <<<`);
   }
   
