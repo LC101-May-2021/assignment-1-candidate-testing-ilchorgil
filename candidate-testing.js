@@ -43,6 +43,7 @@ function askQuestion() {
   }
 }
 }
+
 function gradeQuiz(candidateAnswers) {
 
 // if (candidateAnswers.toUpperCase() === correctAnswers[i].toUpperCase()){
@@ -55,10 +56,7 @@ function gradeQuiz(candidateAnswers) {
 //   }
   // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly // 
 let numbOfQuiz = 5;
-// let percentage = 
- 
-// let points = correctAnswers;
-  let grade = (points / numbOfQuiz) * 100;
+let grade = (points / numbOfQuiz) * 100;
   if (grade >= 80) {
     console.log(`>>> Overall Grade: ${grade}% (${points} of 5 responses correct) <<<`);
     console.log(`>>> Status: PASSED <<<`);
