@@ -16,7 +16,7 @@ let totals = "";
 
 let questions = [
   "1) Who was the first American woman in space? ",
-  "2) True or false: 5 kilometer = 5000 meters.",
+  "2) True or false: 5000 meters = 5 kilometers.",
   "3) (5 + 3)/2 * 10 = ? ", 
   "4) Given the array [8, 'Orbit', 'Trajectory', 45], what entry is at index 2? ", 
   "5) What is the minimum crew size for the ISS? "];
@@ -48,18 +48,20 @@ let numbOfQuiz = 5;
   for (let i = 0; i < questions.length; i++) {
 	 let candidateAnswers = input.question(questions[i])
 	if (candidateAnswers.toUpperCase() === correctAnswers[i].toUpperCase()){
-		console.log(`Good job ${candidateName}! You answered correct!!!${score++}`)
+		console.log(`Your Answer: ${candidateAnswers}`)
     points++;
+    console.log(`Correct Answer: ${correctAnswers[i]}\n`)
 	} else {
-		console.log(`Sorry wrong answer`);
-	}
+    console.log(`Your Answer: ${candidateAnswers}`)
+	  console.log(`Correct Answer: ${correctAnswers[i]}\n`);
+  }
   }
 // let points = correctAnswers;
 
   let grade = (points/ numbOfQuiz) * 100;
   if (grade >= 80) {
     console.log(`>>> Overall Grade : ${grade}% (${points} of 5 responses correct) <<<`);
-    console.log(`>>> Status: PASSED Succesfully <<<`);
+    console.log(`>>> Status: PASSED <<<`);
   } else {
     console.log(`>>> Overall Grade : ${grade}% (${points} of 5 responses correct) <<<`);
     console.log(`>>> Status: FAILED <<<`);
@@ -68,12 +70,11 @@ let numbOfQuiz = 5;
   return grade;
 }
 
-
 function runProgram() {
   askForName();
   // TODO 1.1c: Ask for candidate's name //
-  console.log(`Hello ${candidateName}! Welcome to the Quiz! Our first question for the quiz is: `);
-  askQuestion();
+  // console.log(`Hello ${candidateName}! Welcome to the Quiz! Our first question for the quiz is: `);
+  // askQuestion();
   gradeQuiz(this.candidateAnswers);
 }
 
