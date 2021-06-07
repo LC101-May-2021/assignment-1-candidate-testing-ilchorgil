@@ -16,7 +16,7 @@ let questions = [
   '1) Who was the first American woman in space? ',
   '2) True or false: 5000 meters = 5 kilometers. ',
   '3) (5 + 3)/2 * 10 = ? ', 
-  "4) Given the array [8, 'Orbit', 'Trajectory', 45], what entry is at index 2?  ", 
+  '4) Given the array [8, "Orbit", "Trajectory", 45], what entry is at index 2?  ', 
   '5) What is the minimum crew size for the ISS? '];
 let correctAnswers = [
   'Sally Ride', 
@@ -31,21 +31,9 @@ function askForName() {
 }
 function askQuestion() {
   // TODO 1.2b: Ask candidate the question and assign the response as candidateAnswer //
-//  candidateAnswer = input.question(questions[0]);
-//  if (candidateAnswer === correctAnswers[0]) {
-//    console.log(`You answered correct!!! ${score++}`);
-//  } else {
-//    console.log("Sorry wrong answer");
-//  }
-}
-function gradeQuiz(candidateAnswers) {
-
-  // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly // 
-let numbOfQuiz = 5;
-// let percentage = 
-  for (let i = 0; i < questions.length; i++) {
+ for (let i = 0; i < questions.length; i++) {
 	 let candidateAnswers = input.question(questions[i])
-	if (candidateAnswers.toUpperCase() === correctAnswers[i].toUpperCase()){
+   if (candidateAnswers.toUpperCase() === correctAnswers[i].toUpperCase()){
 		console.log(`Your Answer: ${candidateAnswers}`)
     points++;
     console.log(`Correct Answer: ${correctAnswers[i]}\n`)
@@ -53,9 +41,23 @@ let numbOfQuiz = 5;
     console.log(`Your Answer: ${candidateAnswers}`)
 	  console.log(`Correct Answer: ${correctAnswers[i]}\n`);
   }
-  }
-// let points = correctAnswers;
+}
+}
+function gradeQuiz(candidateAnswers) {
 
+// if (candidateAnswers.toUpperCase() === correctAnswers[i].toUpperCase()){
+// 		console.log(`Your Answer: ${candidateAnswers}`)
+//     points++;
+//     console.log(`Correct Answer: ${correctAnswers[i]}\n`)
+// 	} else {
+//     console.log(`Your Answer: ${candidateAnswers}`)
+// 	  console.log(`Correct Answer: ${correctAnswers[i]}\n`);
+//   }
+  // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly // 
+let numbOfQuiz = 5;
+// let percentage = 
+ 
+// let points = correctAnswers;
   let grade = (points/ numbOfQuiz) * 100;
   if (grade >= 80) {
     console.log(`>>> Overall Grade: ${grade}% (${points} of 5 responses correct) <<<`);
@@ -64,7 +66,6 @@ let numbOfQuiz = 5;
     console.log(`>>> Overall Grade: ${grade}% (${points} of 5 responses correct) <<<`);
     console.log(`>>> Status: FAILED <<<`);
   }
-  
   return grade;
 }
 
@@ -72,7 +73,7 @@ function runProgram() {
   askForName();
   // TODO 1.1c: Ask for candidate's name //
   // console.log(`Hello ${candidateName}! Welcome to the Quiz! Our first question for the quiz is: `);
-  // askQuestion();
+  askQuestion();
   gradeQuiz(this.candidateAnswers);
 }
 
