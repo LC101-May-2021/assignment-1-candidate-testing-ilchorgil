@@ -10,7 +10,6 @@ let candidateAnswers = [];
 let question = "";
 let candidateAnswer = "";
 let correctAnswer = "";
-// let score = 1;
 let points = 0;
 let questions = [
   '1) Who was the first American woman in space? ',
@@ -45,17 +44,8 @@ function askQuestion() {
 }
 
 function gradeQuiz(candidateAnswers) {
-
-// if (candidateAnswers.toUpperCase() === correctAnswers[i].toUpperCase()){
-// 		console.log(`Your Answer: ${candidateAnswers}`)
-//     points++;
-//     console.log(`Correct Answer: ${correctAnswers[i]}\n`)
-// 	} else {
-//     console.log(`Your Answer: ${candidateAnswers}`)
-// 	  console.log(`Correct Answer: ${correctAnswers[i]}\n`);
-//   }
   // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly // 
-let numbOfQuiz = 5;
+let numbOfQuiz = questions.length;
 let grade = (points / numbOfQuiz) * 100;
   if (grade >= 80) {
     console.log(`>>> Overall Grade: ${grade}% (${points} of 5 responses correct) <<<`);
